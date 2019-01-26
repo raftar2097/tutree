@@ -1,0 +1,25 @@
+<h1>Questions</h1>
+<div class="row">
+	{{#each questions}}
+		<div class="col s12 m4">
+			<div class="card center-align">
+				<div class="card-image">
+					
+				</div>
+				<div class="card-content center-align">
+					<p class="story-text">{{truncate body 150}}</p>
+					<br>
+					<div class="container">
+					   <img class="logo" src="/img/download.png">
+					   <a href="/questioins/user/{{user.id}}"><p>{{user.firstname}} {{user.lastname}}</p></a>
+					</div>
+				</div>
+				<div class="card-action center-align">
+					<a class="btn grey" href="/questions/show/{{_id}}">Read More</a>
+				</div>
+			</div>
+		</div>
+	{{else}}
+		<p>No Questions Found</p>
+	{{/each}}
+</div>

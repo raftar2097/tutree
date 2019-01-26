@@ -1,0 +1,85 @@
+<h1>Tutor  Registration</h1>
+<div class="row">
+	<form action="/users/tutor/register" method="post" class="col s12">
+		<div class="row">
+			<div class="input-field">
+				<input type="email" class="validate" name="email" required>
+				<label for="email">Email</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s6">
+				<div class="input-field">
+					<input type="password" name="password" required>
+					<label for="password1">Password</label>
+				</div>
+			</div>
+			<div class="col s6">
+				<div class="input-field">
+					<input type="password" name="password2" required>
+					<label for="password2">Confirm-Password</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s6">
+				<div class="input-field">
+					<input type="text" name="firstName" required>
+					<label for="firstName">First Name</label>
+				</div>
+			</div>
+			<div class="col s6">
+				<div class="input-field">
+					<input type="text" name="lastName" required>
+					<label for="lastName">Last Name</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s6">
+				<div class="input-field">
+					<input type="text" name="DOB" required>
+					<label for="DOB">mm/dd/yy</label>
+				</div>
+			</div>
+			<div class="col s3">
+				<div class="input-field">
+					<select name="field">
+						<option value="Maths" selected>Maths</option>
+						<option value="Science">Science</option>
+					</select>
+					<label for="field">Field</label>
+				</div>
+			</div>
+			<div class="col s3">
+				<div class="input-field">
+					<select name="gender">
+						<option value="M" selected>Male</option>
+						<option value="F">Female</option>
+					</select>
+					<label for="gender">Gender</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s8">
+				<div class="input-field">
+					<input type="text" name="organization" required>
+					<label for="organization">Organization</label>
+				</div>
+			</div>
+			<div class="col s4">
+				<div class="input-field">
+					<input type="text" name="city" required>
+					<label for="city">city</label>
+				</div>
+			</div>
+		</div>
+		<input type="submit" value="Register" class="btn">
+
+
+	</form>
+	
+</div>

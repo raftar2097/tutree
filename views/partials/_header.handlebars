@@ -1,0 +1,52 @@
+<nav class="blue darken-2">
+	<div class="container">
+		<div class="nav-wrapper">
+			
+			<!-- RIGHT NAVS -->
+			<ul class="right hide-on-small-only">
+				{{#if user}}
+					<li><a href="/dashboard">Welcome {{user.firstName}}</a></li>
+					<li><a href="/users/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+					<li><a href="/posts"><i class="fa fa-sign-out"></i> Posts</a></li>
+					{{#if user.status}}
+					{{else}}
+						<li><a href="http://127.0.0.1:4000"> Quiz</a></li>
+						<li><a href="/locality">Locality</a></li>
+
+					{{/if}}
+				{{else}}
+					<li><a href="/questions"><i class="fa fa-question"></i>Explore Questions</a></li>
+					<li><a href="/posts/besttutors"><i class="fa fa-question"></i>Find Tutors</a></li>
+					<li><a href="/posts"><i class="fa fa-question"></i>Posts</a></li>
+				{{/if}}
+				
+			</ul>
+			<ul id="main-menu" class="side-nav">
+				s
+				{{#if user}}
+					{{#if user.status}}
+						<li class="divider"></li>
+						<li><a href="/dashboard"><i class="fa fa-cog"></i>Dashboard</a></li>
+						<li><a href="/questions/my"><i class="fa fa-user"></i>My Answers</a></li>
+						<li><a href="/users/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+					{{else}}
+						<li class="divider"></li>
+						<li><a href="/dashboard"><i class="fa fa-cog"></i>Dashboard</a></li>
+						<li><a href="/questions/my"><i class="fa fa-user"></i>My Questios</a></li>
+						<li><a href="http://127.0.0.1:5000"> Predictor</a></li>
+						<li><a href="/users/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+					{{/if}}
+				{{else}}
+					<li><a href="/users/login" class="btn red darken-1"><i class="fa fa-login left"></i>Login</a></li>
+					<li>
+					<a href="/users/register" class="btn blue darken-1"><i class="fa fa-register left"></i>Register</a></li>
+				{{/if}}
+				<li><a href="/questions"><i class="fa fa-book"></i> questions</a></li>
+			</ul>
+			<div class="left">
+			<a href="/" class="brand-logo center">TuTree</a>
+			<a href="#" data-activates="main-menu" class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
+			</div>
+		</div>
+	</div>
+</nav>

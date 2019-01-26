@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+<div class="row">
+	{{#each users}}
+		<div class="row s12 m4">
+			<div class="card center-align">
+				<div class="card-content center-align">
+					<div class="container">
+					   <p>{{firstName}} {{lastName}}</p></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	{{else}}
+		<p>No Posts Found</p>
+	{{/each}}
+</div>
